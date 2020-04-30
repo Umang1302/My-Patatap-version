@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Patatap</title>
+  <script type="text/javascript" src="paper-full.js"></script>
+	<link rel="stylesheet" type="text/css" href="My_patatap.css">
+  <script type="text/javascript" src="howler.js"></script>
+	
+  <script type="text/paperscript" canvas="myCanvas">
+
+   var sound1 = new Howl({
+  src: ['Sounds/bubbles.mp3']
+});
+
+   var sound2 = new Howl({
+  src: ['Sounds/clay.mp3']
+});
+
+   var sound3 = new Howl({
+  src: ['Sounds/confetti.mp3']
+});
+   var sound4 = new Howl({
+  src: ['Sounds/corona.mp3']
+});
+   var sound5 = new Howl({
+  src: ['Sounds/dotted-spiral.mp3']
+});
+   var sound6 = new Howl({
+  src: ['Sounds/flash-1.mp3']
+});
+   var sound7 = new Howl({
+  src: ['Sounds/flash-2.mp3']
+});
+   var sound8 = new Howl({
+  src: ['Sounds/flash-3.mp3']
+});
+   var sound9 = new Howl({
+  src: ['Sounds/glimmer.mp3']
+});
+   var sound10 = new Howl({
+  src: ['Sounds/moon.mp3']
+});
+   var sound11= new Howl({
+  src: ['Sounds/pinwheel.mp3']
+});
+   var sound12= new Howl({
+  src: ['Sounds/piston-1.mp3']
+});
+   var sound13= new Howl({
+  src: ['Sounds/piston-2.mp3']
+});
+   var sound14= new Howl({
+  src: ['Sounds/piston-3.mp3']
+});
+   var sound15= new Howl({
+  src: ['Sounds/prism-1.mp3']
+});
+   var sound16= new Howl({
+  src: ['Sounds/prism-2.mp3']
+});
+   var sound17= new Howl({
+  src: ['Sounds/prism-3.mp3']
+});
+   var sound18= new Howl({
+  src: ['Sounds/splits.mp3']
+});
+   var sound19= new Howl({
+  src: ['Sounds/squiggle.mp3']
+});
+   var sound20= new Howl({
+  src: ['Sounds/strike.mp3']
+});
+   var sound21= new Howl({
+  src: ['Sounds/suspension.mp3']
+});
+   var sound22= new Howl({
+  src: ['Sounds/timer.mp3']
+});
+   var sound23= new Howl({
+  src: ['Sounds/ufo.mp3']
+});
+   var sound24= new Howl({
+  src: ['Sounds/veil.mp3']
+});
+   var sound25= new Howl({
+  src: ['Sounds/wipe.mp3']
+});
+   var sound26= new Howl({
+  src: ['Sounds/zig-zag.mp3']
+});
+
+var circle=[]; 
+function onKeyDown(event) {
+
+   var maxPoint = new Point(view.size.width, view.size.height ); 
+   var randomPoint=Point.random();
+   var point=maxPoint * randomPoint;
+   var newCircle = new Path.Circle(point, 500);
+      if(event.key=="a"){
+           sound1.play();
+           newCircle.fillColor="#2c3e50";
+     }
+
+     else if(event.key=="s"){
+           sound2.play();
+            newCircle.fillColor="#16a085" ;         
+     }
+          else if(event.key=="d"){
+           sound3.play();
+            newCircle.fillColor="#FFB960" ;         
+     }
+          else if(event.key=="f"){
+           sound4.play();
+            newCircle.fillColor="#C6FF60" ;         
+     }
+          else if(event.key=="g"){
+           sound5.play();
+            newCircle.fillColor="#60FF99" ;         
+     }
+          else if(event.key=="h"){
+           sound6.play();
+            newCircle.fillColor="#60FFE1" ;         
+     }
+          else if(event.key=="j"){
+           sound7.play();
+            newCircle.fillColor="#60BAFF " ;         
+     }
+          else if(event.key=="k"){
+           sound7.play();
+            newCircle.fillColor="#8560FF " ;         
+     }
+          else if(event.key=="l"){
+           sound8.play();
+            newCircle.fillColor="#AD1A9D " ;         
+     }
+          else if(event.key=="q"){
+           sound9.play();
+            newCircle.fillColor="#AD1A61 " ;         
+     }
+          else if(event.key=="w"){
+           sound10.play();
+            newCircle.fillColor="#16a085" ;         
+     }
+          else if(event.key=="e"){
+           sound11.play();
+            newCircle.fillColor="#AD1A61 " ;         
+     }
+          else if(event.key=="r"){
+           sound12.play();
+            newCircle.fillColor="#orange" ;         
+     }
+          else if(event.key=="t"){
+           sound13.play();
+            newCircle.fillColor="pink" ;         
+     }
+         else if(event.key=="y"){
+           sound14.play();
+            newCircle.fillColor="green" ;         
+     }
+          else if(event.key=="u"){
+           sound15.play();
+            newCircle.fillColor="yellow" ;         
+     }
+          else if(event.key=="i"){
+           sound16.play();
+            newCircle.fillColor="#9A293F " ;         
+     }
+          else if(event.key=="o"){
+           sound17.play();
+            newCircle.fillColor="#16a085" ;         
+     }
+          else if(event.key=="p"){
+           sound18.play();
+            newCircle.fillColor="#16a085" ;         
+     }
+          else if(event.key=="z"){
+           sound19.play();
+            newCircle.fillColor="#16a085" ;         
+     }
+          else if(event.key=="x"){
+           sound20.play();
+            newCircle.fillColor="#16a085" ;         
+     }
+          else if(event.key=="c"){
+           sound21.play();
+            newCircle.fillColor="#16a085" ;         
+     }
+          else if(event.key=="v"){
+           sound22.play();
+            newCircle.fillColor="#9A293F " ;         
+     }
+          else if(event.key=="b"){
+           sound23.play();
+            newCircle.fillColor="#16a085" ;         
+     }
+          else if(event.key=="n"){
+           sound24.play();
+            newCircle.fillColor="#C6FF60" ;         
+     }
+          else if(event.key=="m"){
+           sound25.play();
+            newCircle.fillColor="#16a085" ;         
+     }else{
+        sound26.play();
+        newCircle.fillColor="orange";
+   }
+
+
+   circle.push(newCircle);
+};
+
+ function onFrame(event){
+ for(var i=0;i<circle.length;i++)
+ {
+    circle[i].fillColor.hue+=1; 
+       circle[i].scale(.9);
+ }
+}
+ 
+
+  
+</script>
+</head>
+<body>
+
+  	<canvas id="myCanvas" resize></canvas>
+
+</body>
+</html>
